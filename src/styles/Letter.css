@@ -1,0 +1,42 @@
+.letter {
+  height: 60px;
+  width: 60px;
+  border: 1px solid rgb(133, 133, 133);
+  margin: 5px;
+  display: grid;
+  place-items: center;
+  font-size: 30px;
+  font-weight: bolder;
+  color: #1c4c96;
+  border-radius: 4px;
+}
+
+.correct {
+  background-color: #6aaa64;
+  border: 1px solid #6aaa64;
+  color: #fff;
+}
+
+.almost {
+  background-color: #c9b458;
+  border: 1px solid #c9b458;
+  color:#fff;
+}
+
+.error {
+  background-color: #495870;
+  border: 1px solid #495870;
+  color:#fff;
+}
+
+.emptyLetter{
+  border: 1px solid rgb(192, 192, 192);
+}
+
+@keyframes example {
+  from {transform: scale(1);}
+  to {transform: scale(1.1);}
+}
+.typedLetter{
+  animation: example 80ms ease;
+}

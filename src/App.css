@@ -1,38 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap");
+
 .App {
   text-align: center;
+  background-color: #fff;
+  width: 100vw;
+  height: 100vh;
+  color: #1c4c96;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: "Nunito", sans-serif;
+  padding: 0%;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav {
+  height: 60px;
+  width: 100%;
+  margin: 0;
+  border-bottom: 1px solid grey;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content:center;
 }
 
-.App-link {
-  color: #61dafb;
+nav h1 {
+  margin: 0;
+  color: #1c4c96;
+  font-size: 45px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.game {
+  width: 100vw;
+  height: calc(100vh - 170px);
+  display: flex;
+  align-items: center;
+  padding-top: 50px;
+  flex-direction: column;
 }
+
