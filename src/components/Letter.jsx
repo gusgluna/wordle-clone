@@ -10,9 +10,11 @@ function Letter({ letterPos, attemptVal }) {
   const correct = correctWord.toUpperCase()[letterPos] === letter;
   const almost =
   !correct && letter !== "" && correctWord.toUpperCase().includes(letter);
+
   const letterState =
   currAttempt.attempt > attemptVal &&
   (correct ? "correct" : almost ? "almost" : "error");
+
   let letterClass = classNames({
     letter: true,
     emptyLetter: !letter,
@@ -23,14 +25,15 @@ function Letter({ letterPos, attemptVal }) {
   })
 
   useEffect(() => {
+    if(currAttempt.attempt > attemptVal){
     if (letter !== "" && !correct && !almost) {
       setDisabledLetters((prev) => [...prev, letter]);
-    }else if (letter !== "" && almost && !correct){
+    } else if (letter !== "" && almost && !correct){
       setAlmostLetters((prev)=>[...prev, letter])
-    }else if(letter !== "" && !almost && correct){
+    } else if(letter !== "" && !almost && correct){
       setCorrectLetters((prev)=>[...prev, letter])
-    }
-  }, [currAttempt.attempt, setAlmostLetters, setCorrectLetters, setDisabledLetters, almost, correct, letter]);
+    }}
+  }, [currAttempt.attempt, setAlmostLetters, setCorrectLetters, setDisabledLetters, almost, correct, letter, attemptVal]);
   return (
     <div className={letterClass} id={`${letterPos}${attemptVal}`}>
       {letter}

@@ -3,9 +3,11 @@ import { AppContext } from "../App";
 import "../styles/Key.css";
 const classNames = require("classnames");
 
-function Key({ keyVal, bigKey, disabled, almost, correct, }) {
+function Key({ keyVal, bigKey, disabled, almost, correct }) {
   const { gameOver, onSelectLetter, onDelete, onEnter } =
     useContext(AppContext);
+
+
 
   const selectLetter = () => {
     if (gameOver.gameOver) return;
@@ -17,6 +19,7 @@ function Key({ keyVal, bigKey, disabled, almost, correct, }) {
       onSelectLetter(keyVal);
     }
   };
+
   let keyClass = classNames({
     key: true,
     disabled: disabled,
@@ -26,10 +29,7 @@ function Key({ keyVal, bigKey, disabled, almost, correct, }) {
   });
 
   return (
-    <div
-      className={keyClass}
-      onClick={selectLetter}
-    >
+    <div className={keyClass} onClick={selectLetter}>
       {keyVal}
     </div>
   );

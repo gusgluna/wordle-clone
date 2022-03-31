@@ -46,6 +46,7 @@ function Keyboard() {
     },
     [gameOver, onDelete, onEnter, onSelectLetter]
   );
+
   useEffect(() => {
     document.addEventListener("keydown", handleKeyboard);
 
