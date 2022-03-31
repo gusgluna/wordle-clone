@@ -18,7 +18,7 @@
 .disabled {
   background-color: #495870;
   border: 1px solid #495870;
-  color:#fff;
+  color: #fff;
 }
 
 .correct {
@@ -30,17 +30,17 @@
 .almost {
   background-color: #c9b458;
   border: 1px solid #c9b458;
-  color:#fff;
+  color: #fff;
 }
 
 @media only screen and (max-width: 700px) {
   .key {
-  width: 30px;
-  height: 35px;
-  margin: 2px;
-  font-size: 10px;
-}
-#big {
-  width: 50px;
-}
+    width: 30px;
+    height: 35px;
+    margin: 2px;
+    font-size: 10px;
+  }
+  .big {
+    width: 55px;
+  }
 }
