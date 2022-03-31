@@ -30,7 +30,7 @@ function Letter({ letterPos, attemptVal }) {
     }else if(letter !== "" && !almost && correct){
       setCorrectLetters((prev)=>[...prev, letter])
     }
-  }, [currAttempt.attempt]);
+  }, [currAttempt.attempt, setAlmostLetters, setCorrectLetters, setDisabledLetters, almost, correct, letter]);
   return (
     <div className={letterClass} id={`${letterPos}${attemptVal}`}>
       {letter}

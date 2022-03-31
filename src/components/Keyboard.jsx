@@ -1,18 +1,18 @@
-import React, { useCallback, useEffect, useContext } from "react";
+import React, { useCallback, useEffect, useContext} from "react";
 import Key from "./Key";
 import { AppContext } from "../App";
 import "../styles/Keyboard.css";
 
+const keys3 = ["Z", "X", "C", "V", "B", "N", "M"];
+const keys1 = ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P"];
+const keys2 = ["A", "S", "D", "F", "G", "H", "J", "K", "L"];
+
 function Keyboard() {
-  const keys1 = ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P"];
-  const keys2 = ["A", "S", "D", "F", "G", "H", "J", "K", "L"];
-  const keys3 = ["Z", "X", "C", "V", "B", "N", "M"];
 
   const {
     disabledLetters,
     almostLetters,
     correctLetters,
-    currAttempt,
     gameOver,
     onSelectLetter,
     onEnter,
@@ -44,7 +44,7 @@ function Keyboard() {
         });
       }
     },
-    [currAttempt]
+    [gameOver, onDelete, onEnter, onSelectLetter]
   );
   useEffect(() => {
     document.addEventListener("keydown", handleKeyboard);

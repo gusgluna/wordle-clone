@@ -1,4 +1,4 @@
-.help{
+.help {
   position: absolute;
   left: 5px;
   height: 30px;
@@ -15,28 +15,34 @@
   /* z-index: 100; */
 }
 
-.instructions{
+.instructions {
   position: absolute;
   height: 100vh;
   width: 100vw;
   background-color: #fff;
-  top:0;
+  top: 0;
   left: 0;
   display: none;
   z-index: 10;
 }
 
-.closeInst{
+.closeInst {
   font-weight: bolder;
   cursor: pointer;
   font-size: 25px;
+  height: 30px;
+  width: 30px;
+  margin: 0 auto;
+  margin-top: 5px;
+  border-radius: 9999px;
+  border: 2px solid #1c4c96;
 }
 
-.visible{
+.visible {
   display: block;
 }
 
-.howto{
+.howto {
   margin: 0 auto;
   width: 300px;
   height: 99%;
